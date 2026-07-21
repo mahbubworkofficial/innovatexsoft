@@ -13,7 +13,11 @@ export default {
           DEFAULT: "#1d4ed8",
           dark: "#1e3a8a",
         },
-        accent: "#7e22ce"
+        accent: "#7e22ce",
+        text: {
+          primary: "#ffffff",
+          secondary: "#a1a1aa",
+        }
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

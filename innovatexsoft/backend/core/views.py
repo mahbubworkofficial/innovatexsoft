@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import Service, TeamMember, Career, Project, BlogPost
-from .serializers import ServiceSerializer, TeamMemberSerializer, CareerSerializer, ProjectSerializer, BlogPostSerializer
+from .models import Service, TeamMember, Career, Project, BlogPost, ContactMessage
+from .serializers import ServiceSerializer, TeamMemberSerializer, CareerSerializer, ProjectSerializer, BlogPostSerializer, ContactMessageSerializer
 
 class ServiceViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Service.objects.all()
@@ -21,3 +21,9 @@ class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
 class BlogPostViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = BlogPost.objects.all().order_by('-created_at')
     serializer_class = BlogPostSerializer
+
+class ContactMessageViewSet(viewsets.ModelViewSet):
+    queryset = ContactMessage.objects.all().order_by('-created_at')
+    serializer_class = ContactMessageSerializer
+    # Allow anyone to create a contact message, but you might want to restrict GET/PUT/DELETE
+    http_method_names = ['post']

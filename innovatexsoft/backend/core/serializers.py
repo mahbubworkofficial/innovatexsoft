@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Service, TeamMember, Career, Project, BlogPost
+from .models import Service, TeamMember, Career, Project, BlogPost, ContactMessage
 
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,4 +24,9 @@ class ProjectSerializer(serializers.ModelSerializer):
 class BlogPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = BlogPost
+        fields = '__all__'
+
+class ContactMessageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ContactMessage
         fields = '__all__'
