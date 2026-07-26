@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { cn } from '../utils/cn';
 
 const companyLinks = [
@@ -14,6 +14,7 @@ const companyLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [companyOpen, setCompanyOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -23,6 +24,20 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [mobileMenuOpen]);
 
   const isActive = (path) => location.pathname === path;
 
@@ -170,13 +185,56 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <Link
-          to="/contact"
-          className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-primary hover:bg-primary-dark rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(29,78,216,0.5)] hover:-translate-y-0.5"
-        >
-          Contact Us
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link
+            to="/contact"
+            className="hidden sm:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-primary hover:bg-primary-dark rounded-full transition-all duration-300 hover:shadow-[0_0_20px_rgba(29,78,216,0.5)] hover:-translate-y-0.5"
+          >
+            Contact Us
+          </Link>
+          
+          {/* Mobile Menu Toggle */}
+          <button 
+            className="lg:hidden text-white p-2 z-50 relative"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-[#000000] bg-opacity-95 backdrop-blur-xl flex flex-col items-center justify-center pt-20 pb-10 px-6 h-screen overflow-y-auto"
+          >
+            <nav className="flex flex-col items-center gap-8 w-full max-w-sm">
+              <Link to="/" className={cn('text-3xl font-bold transition-colors', isActive('/') ? 'text-primary' : 'text-white')}>Home</Link>
+              <Link to="/services" className={cn('text-3xl font-bold transition-colors', isActive('/services') ? 'text-primary' : 'text-white')}>Services</Link>
+              
+              <div className="flex flex-col items-center w-full">
+                <span className="text-3xl font-bold text-white mb-4">Company</span>
+                <div className="flex flex-col items-center gap-4 border-l-2 border-white/10 pl-6">
+                  {companyLinks.map(link => (
+                    <Link key={link.name} to={link.path} className="text-xl text-text-secondary hover:text-primary transition-colors">
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <Link to="/work" className={cn('text-3xl font-bold transition-colors', isActive('/work') ? 'text-primary' : 'text-white')}>Work</Link>
+              <Link to="/blog" className={cn('text-3xl font-bold transition-colors', isActive('/blog') ? 'text-primary' : 'text-white')}>Insider</Link>
+              <Link to="/contact" className={cn('text-3xl font-bold transition-colors mt-4 text-primary', isActive('/contact') ? 'text-primary' : 'text-white')}>Contact Us</Link>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

@@ -17,7 +17,7 @@ export default function Work() {
         Strategic Outcomes: 40% performance benchmark exceedance, cloud-native architecture, {'<'}100ms response latency, and enterprise-grade security.
       </p>
 
-      <div className="grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {projects.map(project => (
           <div key={project.id} className="glass-card" style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ height: '200px', background: 'var(--bg-secondary)', borderRadius: '8px', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

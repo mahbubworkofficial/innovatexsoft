@@ -57,7 +57,7 @@ export default function Home() {
               <span className="text-sm font-medium text-white/80">INNOVATEX v2.0</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold font-outfit leading-[1.1] tracking-tight mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-outfit leading-[1.1] tracking-tight mb-8">
               Engineering the <span className="text-gradient">Future</span> of Intelligent <span className="text-[#3b82f6]">Digital</span> Experiences.
             </h1>
 

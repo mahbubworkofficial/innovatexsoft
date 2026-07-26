@@ -27,7 +27,7 @@ export default function Services() {
         We are a boutique creative technology house specializing in high-end design, immersive experiences, and strategic AI integration.
       </p>
 
-      <div className="grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map(service => (
           <div key={service.id} className="glass-card">
             <div style={{ marginBottom: '1.5rem' }}>

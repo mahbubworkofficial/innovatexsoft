@@ -23,7 +23,7 @@ export default function About() {
           <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
             Transform businesses through intelligent engineering by integrating Generative AI and cutting-edge architecture into products.
           </p>
-          <div className="grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
               <h3 style={{ color: 'var(--accent)', marginBottom: '0.5rem' }}>AI-First Approach</h3>
               <p style={{ color: 'var(--text-secondary)' }}>Core integration of AI rather than as an add-on.</p>
@@ -42,7 +42,7 @@ export default function About() {
 
       <section style={{ marginBottom: '6rem' }}>
         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem' }}>The <span className="text-gradient">Nodes</span></h2>
-        <div className="grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map(member => (
             <div key={member.id} className="glass-card" style={{ textAlign: 'center' }}>
               <div style={{ width: '80px', height: '80px', borderRadius: '50%', background: 'var(--bg-secondary)', margin: '0 auto 1rem auto', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem' }}>
@@ -61,7 +61,7 @@ export default function About() {
 
       <section>
         <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem' }}>Join <span className="text-gradient">The Network</span></h2>
-        <div className="grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {careers.map(job => (
             <div key={job.id} className="glass-card">
               <h3 style={{ marginBottom: '0.5rem' }}>{job.title}</h3>
