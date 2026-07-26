@@ -203,25 +203,39 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Backdrop */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#000000] bg-opacity-95 backdrop-blur-xl flex flex-col items-center justify-center pt-20 pb-10 px-6 h-screen overflow-y-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-30 bg-black/60 backdrop-blur-sm lg:hidden"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Menu Drawer */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ duration: 0.3, type: 'spring', bounce: 0 }}
+            className="fixed right-0 top-0 bottom-0 z-40 w-[85vw] max-w-sm bg-[#0a0a0a] border-l border-white/10 shadow-2xl flex flex-col pt-24 pb-10 px-8 h-screen overflow-y-auto lg:hidden"
           >
-            <nav className="flex flex-col items-center gap-8 w-full max-w-sm">
+            <nav className="flex flex-col items-start gap-8 w-full">
               <Link to="/" className={cn('text-3xl font-bold transition-colors', isActive('/') ? 'text-primary' : 'text-white')}>Home</Link>
               <Link to="/services" className={cn('text-3xl font-bold transition-colors', isActive('/services') ? 'text-primary' : 'text-white')}>Services</Link>
               
-              <div className="flex flex-col items-center w-full">
+              <div className="flex flex-col items-start w-full">
                 <span className="text-3xl font-bold text-white mb-4">Company</span>
-                <div className="flex flex-col items-center gap-4 border-l-2 border-white/10 pl-6">
+                <div className="flex flex-col items-start gap-4 border-l-2 border-white/10 pl-6 w-full">
                   {companyLinks.map(link => (
-                    <Link key={link.name} to={link.path} className="text-xl text-text-secondary hover:text-primary transition-colors">
+                    <Link key={link.name} to={link.path} className="text-xl text-text-secondary hover:text-primary transition-colors block w-full py-1">
                       {link.name}
                     </Link>
                   ))}
@@ -230,7 +244,12 @@ export default function Navbar() {
 
               <Link to="/work" className={cn('text-3xl font-bold transition-colors', isActive('/work') ? 'text-primary' : 'text-white')}>Work</Link>
               <Link to="/blog" className={cn('text-3xl font-bold transition-colors', isActive('/blog') ? 'text-primary' : 'text-white')}>Insider</Link>
-              <Link to="/contact" className={cn('text-3xl font-bold transition-colors mt-4 text-primary', isActive('/contact') ? 'text-primary' : 'text-white')}>Contact Us</Link>
+              
+              <div className="mt-auto pt-8 w-full">
+                <Link to="/contact" className={cn('w-full inline-flex items-center justify-center px-6 py-4 text-base font-semibold text-white bg-primary hover:bg-primary-dark rounded-xl transition-all duration-300', isActive('/contact') ? 'ring-2 ring-white' : '')}>
+                  Contact Us
+                </Link>
+              </div>
             </nav>
           </motion.div>
         )}

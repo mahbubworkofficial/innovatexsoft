@@ -65,11 +65,11 @@ export default function Home() {
               At Innovatex Soft, we bridge the gap between complex technology and intuitive user experiences. We empower modern teams to build, scale, and innovate faster with high-performance digital solutions.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 mb-16">
-              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-primary hover:bg-primary-dark rounded-xl transition-all duration-300 hover:shadow-[0_0_25px_rgba(29,78,216,0.5)] hover:-translate-y-1">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-16">
+              <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-primary hover:bg-primary-dark rounded-xl transition-all duration-300 hover:shadow-[0_0_25px_rgba(29,78,216,0.5)] hover:-translate-y-1 w-full sm:w-auto">
                 Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link to="/services" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-white/5 border border-white/10 hover:bg-white/10 rounded-xl transition-all duration-300 backdrop-blur-md hover:-translate-y-1">
+              <Link to="/services" className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-white/5 border border-white/10 hover:bg-white/10 rounded-xl transition-all duration-300 backdrop-blur-md hover:-translate-y-1 w-full sm:w-auto">
                 Explore Our Solutions
               </Link>
             </div>
