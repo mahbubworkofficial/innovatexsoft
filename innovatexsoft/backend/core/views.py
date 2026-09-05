@@ -32,26 +32,33 @@ class ContactMessageViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         instance = serializer.save()
         
-        # Email Dispatch to info@innovatexsoft.com
-        subject = f"[Innovatex Soft] Contact Message: {instance.subject}"
-        body = f"""New contact form message received from Innovatex Soft website:
+        # Email Dispatch from innovatexsoft@gmail.com
+        subject = f"[Innovatex Soft Website] New Inquiry from {instance.name}: {instance.subject}"
+        body = f"""New Contact Form Message Received:
 
-Name: {instance.name}
-Email: {instance.email}
+==================================================
+CLIENT DETAILS:
+==================================================
+Full Name: {instance.name}
+Email Address: {instance.email}
 Subject: {instance.subject}
 
-Message:
+==================================================
+MESSAGE BODY:
+==================================================
 {instance.message}
 
----
-Sent via Innovatex Soft Web System
+==================================================
+Reply directly to the client at: {instance.email}
+--------------------------------------------------
+Automated Dispatch via Innovatex Soft Engine (innovatexsoft@gmail.com)
 """
         try:
             send_mail(
                 subject=subject,
                 message=body,
-                from_email=getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@innovatexsoft.com'),
-                recipient_list=['info@innovatexsoft.com'],
+                from_email='innovatexsoft@gmail.com',
+                recipient_list=['info@innovatexsoft.com', 'innovatexsoft@gmail.com'],
                 fail_silently=True,
             )
         except Exception as e:
