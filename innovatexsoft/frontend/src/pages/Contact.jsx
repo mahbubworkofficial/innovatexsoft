@@ -73,46 +73,55 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="glass-card h-full flex flex-col justify-center">
-              <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
-              
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" />
+            <div className="glass-card h-full flex flex-col justify-between">
+              <div>
+                <h2 className="text-3xl font-bold mb-3 font-outfit">Let's Connect</h2>
+                <p className="text-sm text-[#7815D0] font-semibold mb-8 tracking-wide uppercase">
+                  Professional Service • Affordable Pricing • Fast Support
+                </p>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-1">Phone / WhatsApp</h3>
+                      <a href="tel:01747200440" className="text-text-secondary hover:text-white transition-colors text-base font-medium">
+                        01747-200440
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Our Office</h3>
-                    <p className="text-text-secondary leading-relaxed">
-                      123 Innovation Drive, Tech District<br />
-                      Silicon Valley, CA 94025
-                    </p>
-                  </div>
-                </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <Mail className="w-6 h-6 text-primary" />
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
+                      <Mail className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-1">Email Us</h3>
+                      <a href="mailto:info@innovatexsoft.com" className="text-text-secondary hover:text-white transition-colors text-base font-medium">
+                        info@innovatexsoft.com
+                      </a>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Email Us</h3>
-                    <a href="mailto:hello@innovatexsoft.com" className="text-text-secondary hover:text-white transition-colors">
-                      hello@innovatexsoft.com
-                    </a>
-                  </div>
-                </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Call Us</h3>
-                    <a href="tel:+15551234567" className="text-text-secondary hover:text-white transition-colors">
-                      +1 (555) 123-4567
-                    </a>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
+                      <MapPin className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-1">Official Website</h3>
+                      <a href="https://www.innovatexsoft.com" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-white transition-colors text-base font-medium">
+                        www.innovatexsoft.com
+                      </a>
+                    </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-xs text-text-secondary">
+                <span>⚡ 24/7 Fast Support Available</span>
+                <span>🚀 Rapid Project Turnaround</span>
               </div>
             </div>
           </motion.div>

@@ -19,24 +19,26 @@ def populate():
 
     print("Populating Services...")
     services = [
-        {"title": "Website Development", "description": "High-traffic web systems built with scalable architecture.", "icon": "Globe"},
-        {"title": "Game Development", "description": "Immersive experiences and interactive gameplay systems.", "icon": "Gamepad2"},
-        {"title": "Mobile App Development", "description": "Native and cross-platform apps for intelligent digital experiences.", "icon": "Smartphone"},
-        {"title": "AI Chatbot Development", "description": "Strategic AI integration and Agentic pipelines.", "icon": "Bot"},
-        {"title": "Creative Design", "description": "Boutique precision design for enterprise-grade SaaS and UI/UX.", "icon": "Palette"},
-        {"title": "Digital Marketing", "description": "Data-driven marketing to scale product visibility and user acquisition.", "icon": "TrendingUp"},
+        {"title": "Website Development", "description": "High-traffic web applications, custom corporate portals, and responsive e-commerce platforms.", "icon": "Globe"},
+        {"title": "Mobile App Development", "description": "Native iOS/Android and cross-platform apps built for seamless digital experiences.", "icon": "Smartphone"},
+        {"title": "Custom Software Solutions", "description": "Tailor-made enterprise software, scalable APIs, and cloud-native backend systems.", "icon": "Code2"},
+        {"title": "Website & App Maintenance", "description": "24/7 technical support, security audits, optimization, and system upgrades.", "icon": "Wrench"},
+        {"title": "Graphic Design & Branding", "description": "Boutique visual identity, UI/UX design systems, logos, and brand collateral.", "icon": "Palette"},
+        {"title": "Digital Marketing", "description": "Data-driven growth strategies, SEO, social media marketing, and ad campaign scaling.", "icon": "TrendingUp"},
+        {"title": "Video Editing", "description": "Professional video post-production, motion graphics, promo videos, and content creation.", "icon": "Video"},
+        {"title": "AI & Chatbot Solutions", "description": "Agentic AI pipelines, intelligent chatbots, and predictive analytics integration.", "icon": "Bot"},
     ]
     for s in services:
         Service.objects.create(**s)
 
     print("Populating Team Members...")
     team = [
-        {"name": "Muhammad Monir Hossain", "role": "Managing Director and Group CEO, Betopia Group", "node": "Leadership", "description": "Visionary leader driving the strategic direction."},
-        {"name": "Sabina Akter", "role": "Chairman, Betopia Group", "node": "Leadership", "description": "Guiding the core values and mission of the group."},
-        {"name": "Gazi Alauddin", "role": "General Manager", "node": "GM-1", "description": "Overseeing daily operations and ensuring extreme velocity."},
-        {"name": "Istiaq Ahmmed Fahad", "role": "Head of Technical Operation", "node": "HTO-1", "description": "Architecting scalable cloud-native solutions."},
-        {"name": "Palash Chandra Barman", "role": "Head of Technical Operation", "node": "HTO-2", "description": "Driving the proprietary engine development."},
-        {"name": "Mushfiqur Rahman", "role": "AGM, Sales", "node": "T1", "description": "Scaling absolute quality product sales."},
+        {"name": "Muhammad Monir Hossain", "role": "Managing Director and Group CEO, Innovatex Soft", "node": "Leadership", "description": "Visionary leader driving strategic direction and technological innovation."},
+        {"name": "Sabina Akter", "role": "Chairman, Innovatex Soft", "node": "Leadership", "description": "Guiding corporate governance, core values, and growth strategy."},
+        {"name": "Gazi Alauddin", "role": "General Manager", "node": "GM-1", "description": "Overseeing global operations, client success, and operational execution."},
+        {"name": "Istiaq Ahmmed Fahad", "role": "Head of Technical Operation", "node": "HTO-1", "description": "Architecting scalable cloud architectures and software pipelines."},
+        {"name": "Palash Chandra Barman", "role": "Head of Technical Operation", "node": "HTO-2", "description": "Directing core engine engineering and developer performance."},
+        {"name": "Mushfiqur Rahman", "role": "AGM, Sales", "node": "T1", "description": "Leading global client acquisition and partnership growth."},
     ]
     for t in team:
         TeamMember.objects.create(**t)

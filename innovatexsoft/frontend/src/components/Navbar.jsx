@@ -55,9 +55,9 @@ export default function Navbar() {
           <div className="w-10 h-10 relative flex items-center justify-center">
             {/* Fallback stylized IS if image is missing, but prioritizing image */}
             <img 
-              src="/logo.png" 
+              src="/logo.jpg" 
               alt="Innovatex Soft Logo" 
-              className="w-full h-full object-contain absolute inset-0 z-10 transition-transform group-hover:scale-105"
+              className="w-full h-full object-contain absolute inset-0 z-10 transition-transform group-hover:scale-105 rounded-md"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 e.currentTarget.nextElementSibling.style.display = 'flex';
