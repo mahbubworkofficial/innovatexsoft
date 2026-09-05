@@ -213,11 +213,22 @@ export default function Contact() {
                 <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3.5 px-6 rounded-lg transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-[#7815D0] hover:bg-[#5b0fa4] text-white font-semibold py-3.5 px-6 rounded-lg transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(120,21,208,0.4)]"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   {!isSubmitting && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                 </button>
+
+                <div className="pt-2 text-center">
+                  <a 
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=info@innovatexsoft.com&su=${encodeURIComponent(formData.subject || 'Project Inquiry')}&body=${encodeURIComponent(`Hi Innovatex Soft Team,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-white/5 hover:bg-white/10 text-white/90 hover:text-white font-medium py-2.5 px-4 rounded-lg transition-all flex items-center justify-center gap-2 border border-white/10 text-xs"
+                  >
+                    ✉️ Or Compose Directly in Gmail (info@innovatexsoft.com)
+                  </a>
+                </div>
               </form>
             </div>
           </motion.div>
