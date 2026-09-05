@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, Globe } from 'lucide-react';
+import { Phone, Mail, Globe, MapPin } from 'lucide-react';
 import { FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
@@ -93,6 +93,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold font-outfit text-lg mb-6 text-white">Contact Info</h4>
             <ul className="space-y-4 text-sm text-text-secondary">
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-[#7815D0] shrink-0 mt-0.5" />
+                <span>103/A South Mugda, Dhaka - 1214</span>
+              </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[#7815D0] shrink-0" />
                 <a href="tel:01747200440" className="hover:text-white transition-colors">01747-200440</a>

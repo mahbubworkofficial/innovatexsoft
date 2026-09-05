@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, MapPin, Mail, Phone, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, MapPin, Mail, Phone, Globe, CheckCircle, AlertCircle } from 'lucide-react';
 import apiClient from '../api/client';
 
 export default function Contact() {
@@ -83,6 +83,18 @@ export default function Contact() {
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
+                      <MapPin className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-1">Office Address</h3>
+                      <p className="text-text-secondary text-base font-medium leading-relaxed">
+                        103/A South Mugda, Dhaka - 1214
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
@@ -107,7 +119,7 @@ export default function Contact() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
-                      <MapPin className="w-6 h-6" />
+                      <Globe className="w-6 h-6" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Official Website</h3>
