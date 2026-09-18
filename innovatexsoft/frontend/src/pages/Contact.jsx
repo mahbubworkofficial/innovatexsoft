@@ -88,7 +88,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Office Address</h3>
                       <p className="text-text-secondary text-base font-medium leading-relaxed">
-                        103/A South Mugda, Dhaka - 1214
+                        Gulshan, Dhaka
                       </p>
                     </div>
                   </div>

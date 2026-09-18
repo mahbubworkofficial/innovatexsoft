@@ -95,7 +95,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-text-secondary">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-[#7815D0] shrink-0 mt-0.5" />
-                <span>103/A South Mugda, Dhaka - 1214</span>
+                <span>Gulshan, Dhaka</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[#7815D0] shrink-0" />
