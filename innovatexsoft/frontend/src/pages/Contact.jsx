@@ -88,7 +88,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold text-lg mb-1">Office Address</h3>
                       <p className="text-text-secondary text-base font-medium leading-relaxed">
-                        Gulshan, Dhaka
+                        Gulshan, Dhaka-1212
                       </p>
                     </div>
                   </div>
