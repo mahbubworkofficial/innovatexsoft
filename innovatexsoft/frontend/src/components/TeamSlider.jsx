@@ -3,12 +3,10 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 
 const teamMembers = [
-  { id: 1, name: 'Muhammad Monir Hossain', role: 'Managing Director & CEO', image: '🧑' },
-  { id: 2, name: 'Sabina Akter', role: 'Chairman', image: '👩' },
-  { id: 3, name: 'Gazi Alauddin', role: 'General Manager', image: '👨' },
-  { id: 4, name: 'Istiaq Ahmmed Fahad', role: 'Head of Technical Operations', image: '👨‍💻' },
-  { id: 5, name: 'Palash Chandra Barman', role: 'Head of Technical Operations', image: '👨‍💻' },
-  { id: 6, name: 'Mushfiqur Rahman', role: 'AGM, Sales', image: '💼' },
+  { id: 1, name: 'MD. Nazmul Huda', role: 'Managing Director', image: '🧑' },
+  { id: 2, name: 'MD. Mir Mossaraf Hossain', role: 'CEO', image: '👨' },
+  { id: 3, name: 'MD. Mahbubur Rahman', role: 'Chief of Technical Operations', image: '👨‍💻' },
+  { id: 4, name: 'MD. Rawha Haolader', role: 'General Manager', image: '💼' },
 ];
 
 export default function TeamSlider() {

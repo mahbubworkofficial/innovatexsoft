@@ -55,7 +55,7 @@ export default function Navbar() {
           <div className="w-10 h-10 relative flex items-center justify-center">
             {/* Fallback stylized IS if image is missing, but prioritizing image */}
             <img 
-              src="/logo.jpg" 
+              src="/logo_removebg.png" 
               alt="Innovatex Soft Logo" 
               className="w-full h-full object-contain absolute inset-0 z-10 transition-transform group-hover:scale-105 rounded-md"
               onError={(e) => {
@@ -67,8 +67,8 @@ export default function Navbar() {
               IS
             </div>
           </div>
-          <span className="font-outfit font-bold text-xl tracking-tight hidden sm:block">
-            INNOVATEX <span className="text-white">SOFT</span>
+          <span className="font-outfit font-bold text-xl tracking-tight hidden sm:block text-white">
+            Innovatexsoft
           </span>
         </Link>
 
