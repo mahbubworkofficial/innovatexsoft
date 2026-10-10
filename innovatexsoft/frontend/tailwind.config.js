@@ -7,24 +7,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#000000",
-        surface: "#0a0a0a",
+        background: "#030014",
+        surface: "#0B0A26",
         primary: {
-          DEFAULT: "#7815D0",
-          dark: "#5b0fa4",
+          DEFAULT: "#00C3FF",
+          dark: "#008b99",
         },
         secondary: {
-          DEFAULT: "#0D46BA",
-          dark: "#0a3690",
+          DEFAULT: "#7000FF",
+          dark: "#450099",
         },
-        accent: "#7815D0",
+        accent: "#00C3FF",
         text: {
-          primary: "#ffffff",
-          secondary: "#a1a1aa",
+          primary: "#E2DCE7",
+          secondary: "#8B949E",
         }
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        futuristic: ['Space Grotesk', 'sans-serif'],
       },
     },
   },

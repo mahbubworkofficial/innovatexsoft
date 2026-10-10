@@ -31,11 +31,11 @@ export default function About() {
           className="text-center max-w-4xl mx-auto mb-20"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-md">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#7815D0] animate-pulse"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#00C3FF] animate-pulse"></span>
             <span className="text-xs font-semibold tracking-wider text-white uppercase">About Innovatex Soft</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-bold font-outfit leading-tight mb-6">
+          <h1 className="text-4xl sm:text-6xl font-bold font-futuristic leading-tight mb-6">
             Engineering Digital Excellence with <span className="text-gradient">Boutique Precision</span>
           </h1>
 
@@ -44,7 +44,7 @@ export default function About() {
           </p>
 
           {/* Tagline Badge */}
-          <div className="mt-8 inline-flex items-center gap-4 px-6 py-3 rounded-2xl bg-gradient-to-r from-[#0D46BA]/20 to-[#7815D0]/20 border border-[#7815D0]/30 shadow-[0_0_30px_rgba(120,21,208,0.2)]">
+          <div className="mt-8 inline-flex items-center gap-4 px-6 py-3 rounded-2xl bg-gradient-to-r from-[#7000FF]/20 to-[#00C3FF]/20 border border-[#00C3FF]/30 shadow-[0_0_30px_rgba(0,195,255,0.2)]">
             <span className="text-sm md:text-base font-bold text-white tracking-wide">
               Professional Service • Affordable Pricing • Fast Support
             </span>
@@ -59,29 +59,29 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-outfit mb-3">Why Partner With Innovatex Soft</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-futuristic mb-3">Why Partner With Innovatex Soft</h2>
             <p className="text-text-secondary max-w-xl mx-auto text-base">Built around speed, quality craftsmanship, and long-term client success.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: <Code2 className="w-8 h-8 text-[#7815D0]" />,
+                icon: <Code2 className="w-8 h-8 text-[#00C3FF]" />,
                 title: "Custom Engineering",
                 desc: "High-traffic websites, mobile apps, and enterprise software built with modern scalable tech stacks."
               },
               {
-                icon: <Palette className="w-8 h-8 text-[#7815D0]" />,
+                icon: <Palette className="w-8 h-8 text-[#00C3FF]" />,
                 title: "Boutique Branding",
                 desc: "Eye-catching graphic design, UI/UX systems, and professional video editing tailored to your brand."
               },
               {
-                icon: <Zap className="w-8 h-8 text-[#7815D0]" />,
+                icon: <Zap className="w-8 h-8 text-[#00C3FF]" />,
                 title: "Fast Support & Delivery",
                 desc: "Rapid turnaround cycles backed by 24/7 maintenance and dedicated technical assistance."
               },
               {
-                icon: <ShieldCheck className="w-8 h-8 text-[#7815D0]" />,
+                icon: <ShieldCheck className="w-8 h-8 text-[#00C3FF]" />,
                 title: "Affordable Pricing",
                 desc: "Enterprise-grade quality delivered with clear, predictable pricing models built for modern startups & SMEs."
               }
@@ -98,7 +98,7 @@ export default function About() {
                   <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6">
                     {pillar.icon}
                   </div>
-                  <h3 className="text-xl font-bold font-outfit mb-3 text-white">{pillar.title}</h3>
+                  <h3 className="text-xl font-bold font-futuristic mb-3 text-white">{pillar.title}</h3>
                   <p className="text-sm text-text-secondary leading-relaxed">{pillar.desc}</p>
                 </div>
               </motion.div>
@@ -115,10 +115,10 @@ export default function About() {
             className="text-center mb-16"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-3">
-              <Users className="w-4 h-4 text-[#7815D0]" />
+              <Users className="w-4 h-4 text-[#00C3FF]" />
               <span className="text-xs font-semibold text-text-secondary uppercase">Leadership & Core Team</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold font-outfit">The Innovatex Engineering Core</h2>
+            <h2 className="text-3xl md:text-5xl font-bold font-futuristic">The Innovatex Engineering Core</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -131,11 +131,11 @@ export default function About() {
                 transition={{ delay: idx * 0.1 }}
                 className="glass-card text-center relative overflow-hidden group"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[#0D46BA]/40 to-[#7815D0]/40 border border-[#7815D0]/40 mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white shadow-lg group-hover:scale-105 transition-transform">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-[#7000FF]/40 to-[#00C3FF]/40 border border-[#00C3FF]/40 mx-auto mb-6 flex items-center justify-center text-3xl font-bold text-white shadow-lg group-hover:scale-105 transition-transform">
                   👤
                 </div>
-                <h3 className="text-xl font-bold font-outfit mb-1 text-white">{member.name}</h3>
-                <p className="text-sm font-semibold text-[#7815D0] mb-3">{member.role}</p>
+                <h3 className="text-xl font-bold font-futuristic mb-1 text-white">{member.name}</h3>
+                <p className="text-sm font-semibold text-[#00C3FF] mb-3">{member.role}</p>
                 <p className="text-xs text-text-secondary leading-relaxed mb-6">{member.description}</p>
                 
                 <span className="inline-block px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-white/70">
@@ -155,10 +155,10 @@ export default function About() {
             className="text-center mb-16"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-3">
-              <Briefcase className="w-4 h-4 text-[#7815D0]" />
+              <Briefcase className="w-4 h-4 text-[#00C3FF]" />
               <span className="text-xs font-semibold text-text-secondary uppercase">Careers at Innovatex</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold font-outfit">Join Our Growing Network</h2>
+            <h2 className="text-3xl md:text-5xl font-bold font-futuristic">Join Our Growing Network</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -173,8 +173,8 @@ export default function About() {
               >
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-4">
-                    <h3 className="text-xl font-bold font-outfit text-white">{job.title}</h3>
-                    <span className="px-3 py-1 rounded-full bg-[#7815D0]/20 text-[#7815D0] text-xs font-semibold border border-[#7815D0]/30 shrink-0">
+                    <h3 className="text-xl font-bold font-futuristic text-white">{job.title}</h3>
+                    <span className="px-3 py-1 rounded-full bg-[#00C3FF]/20 text-[#00C3FF] text-xs font-semibold border border-[#00C3FF]/30 shrink-0">
                       {job.category}
                     </span>
                   </div>
@@ -186,7 +186,7 @@ export default function About() {
 
                 <a 
                   href="/contact" 
-                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 hover:bg-[#7815D0] hover:text-white border border-white/10 transition-all text-sm font-semibold text-white/90 group"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 hover:bg-[#00C3FF] hover:text-white border border-white/10 transition-all text-sm font-semibold text-white/90 group"
                 >
                   Apply Now <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>

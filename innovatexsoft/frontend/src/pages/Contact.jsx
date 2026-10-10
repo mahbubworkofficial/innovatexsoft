@@ -75,14 +75,14 @@ export default function Contact() {
           >
             <div className="glass-card h-full flex flex-col justify-between">
               <div>
-                <h2 className="text-3xl font-bold mb-3 font-outfit">Let's Connect</h2>
-                <p className="text-sm text-[#7815D0] font-semibold mb-8 tracking-wide uppercase">
+                <h2 className="text-3xl font-bold mb-3 font-futuristic">Let's Connect</h2>
+                <p className="text-sm text-[#00C3FF] font-semibold mb-8 tracking-wide uppercase">
                   Professional Service • Affordable Pricing • Fast Support
                 </p>
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
+                    <div className="w-12 h-12 rounded-full bg-[#00C3FF]/20 border border-[#00C3FF]/30 flex items-center justify-center shrink-0 text-[#00C3FF]">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
@@ -94,7 +94,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
+                    <div className="w-12 h-12 rounded-full bg-[#00C3FF]/20 border border-[#00C3FF]/30 flex items-center justify-center shrink-0 text-[#00C3FF]">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
@@ -106,7 +106,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
+                    <div className="w-12 h-12 rounded-full bg-[#00C3FF]/20 border border-[#00C3FF]/30 flex items-center justify-center shrink-0 text-[#00C3FF]">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
@@ -118,7 +118,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#7815D0]/20 border border-[#7815D0]/30 flex items-center justify-center shrink-0 text-[#7815D0]">
+                    <div className="w-12 h-12 rounded-full bg-[#00C3FF]/20 border border-[#00C3FF]/30 flex items-center justify-center shrink-0 text-[#00C3FF]">
                       <Globe className="w-6 h-6" />
                     </div>
                     <div>
@@ -213,7 +213,7 @@ export default function Contact() {
                 <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#7815D0] hover:bg-[#5b0fa4] text-white font-semibold py-3.5 px-6 rounded-lg transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(120,21,208,0.4)]"
+                  className="w-full bg-[#00C3FF] hover:bg-[#ffffff] text-white font-semibold py-3.5 px-6 rounded-lg transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(0,195,255,0.4)]"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   {!isSubmitting && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}

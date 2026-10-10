@@ -15,7 +15,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-32 relative z-10 bg-[#0a0a0a]">
+    <section className="py-32 relative z-10 bg-[#0B0A26]">
       <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-outfit mb-4">Client Success Stories</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-futuristic mb-4">Client Success Stories</h2>
           <p className="text-text-secondary max-w-2xl mx-auto">Don't just take our word for it. See what our partners say about our work.</p>
         </motion.div>
 
@@ -40,7 +40,7 @@ export default function Testimonials() {
               <div className="text-primary text-4xl mb-6">"</div>
               <p className="text-xl leading-relaxed mb-8">{test.quote}</p>
               <div>
-                <h4 className="font-bold font-outfit text-lg">{test.author}</h4>
+                <h4 className="font-bold font-futuristic text-lg">{test.author}</h4>
                 <p className="text-text-secondary text-sm">{test.role}</p>
               </div>
             </motion.div>

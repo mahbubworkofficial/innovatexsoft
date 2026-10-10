@@ -25,7 +25,7 @@ const timelineEvents = [
 
 export default function Timeline() {
   return (
-    <section className="py-32 relative z-10 bg-[#050505]">
+    <section className="py-32 relative z-10 bg-[#030014]">
       <div className="container mx-auto px-6 max-w-4xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function Timeline() {
           className="text-center mb-24"
         >
           <p className="text-primary font-semibold tracking-widest text-sm mb-4 uppercase">Our Journey</p>
-          <h2 className="text-4xl md:text-5xl font-bold font-outfit">The Evolution of Innovatex</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-futuristic">The Evolution of Innovatex</h2>
         </motion.div>
 
         <div className="relative border-l-2 border-white/10 ml-4 md:mx-auto md:ml-auto md:border-l-0">
@@ -55,8 +55,8 @@ export default function Timeline() {
               
               <div className="w-full md:w-5/12 pl-8 md:pl-0">
                 <div className={`bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                  <span className="text-4xl font-bold font-outfit text-white/10 block mb-2">{event.year}</span>
-                  <h3 className="text-2xl font-bold font-outfit mb-3">{event.title}</h3>
+                  <span className="text-4xl font-bold font-futuristic text-white/10 block mb-2">{event.year}</span>
+                  <h3 className="text-2xl font-bold font-futuristic mb-3">{event.title}</h3>
                   <p className="text-text-secondary">{event.description}</p>
                 </div>
               </div>

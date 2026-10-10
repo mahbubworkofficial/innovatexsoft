@@ -29,7 +29,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-outfit mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-futuristic mb-4">Frequently Asked Questions</h2>
         </motion.div>
 
         <div className="space-y-4">
@@ -46,7 +46,7 @@ export default function FAQ() {
                 className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
               >
-                <span className="font-bold font-outfit text-xl">{faq.question}</span>
+                <span className="font-bold font-futuristic text-xl">{faq.question}</span>
                 {openIndex === index ? <Minus className="text-primary" /> : <Plus className="text-text-secondary" />}
               </button>
               <AnimatePresence>

@@ -24,8 +24,8 @@ export default function TeamSlider() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-[#7815D0] font-semibold tracking-widest text-xs mb-3 uppercase">The Minds Behind Innovatex Soft</p>
-            <h2 className="text-3xl md:text-5xl font-bold font-outfit text-white">Our Leadership & Engineering Core</h2>
+            <p className="text-[#00C3FF] font-semibold tracking-widest text-xs mb-3 uppercase">The Minds Behind Innovatex Soft</p>
+            <h2 className="text-3xl md:text-5xl font-bold font-futuristic text-white">Our Leadership & Engineering Core</h2>
           </motion.div>
           
           <motion.div 
@@ -44,7 +44,7 @@ export default function TeamSlider() {
             <button 
               onClick={next} 
               aria-label="Next Team Member"
-              className="w-12 h-12 rounded-full border border-[#7815D0]/40 bg-[#7815D0]/20 text-white flex items-center justify-center hover:bg-[#7815D0] transition-colors shadow-[0_0_15px_rgba(120,21,208,0.3)]"
+              className="w-12 h-12 rounded-full border border-[#00C3FF]/40 bg-[#00C3FF]/20 text-white flex items-center justify-center hover:bg-[#00C3FF] transition-colors shadow-[0_0_15px_rgba(0,195,255,0.3)]"
             >
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -65,7 +65,7 @@ export default function TeamSlider() {
                 transition={{ delay: idx * 0.08 }}
                 className={`w-[300px] h-[390px] rounded-3xl p-6 flex flex-col justify-between transition-all duration-300 border
                   ${currentIndex === idx 
-                    ? 'bg-gradient-to-b from-[#7815D0]/15 to-[#0D46BA]/15 border-[#7815D0]/50 shadow-[0_10px_30px_rgba(120,21,208,0.2)]' 
+                    ? 'bg-gradient-to-b from-[#00C3FF]/15 to-[#7000FF]/15 border-[#00C3FF]/50 shadow-[0_10px_30px_rgba(0,195,255,0.2)]' 
                     : 'bg-[#0c0c0c] border-white/10 hover:border-white/20'}
                 `}
               >
@@ -73,8 +73,8 @@ export default function TeamSlider() {
                   {member.image}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold font-outfit mb-1 text-white">{member.name}</h3>
-                  <p className="text-xs text-[#7815D0] font-semibold">{member.role}</p>
+                  <h3 className="text-xl font-bold font-futuristic mb-1 text-white">{member.name}</h3>
+                  <p className="text-xs text-[#00C3FF] font-semibold">{member.role}</p>
                 </div>
               </motion.div>
             ))}

@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
 :root {
-  --bg-primary: #000000;
-  --bg-secondary: #0a0a0a;
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --accent: #7815D0;
-  --accent-secondary: #0D46BA;
-  --accent-glow: rgba(120, 21, 208, 0.4);
-  --secondary-glow: rgba(13, 70, 186, 0.4);
+  --bg-primary: #030014;
+  --bg-secondary: #0B0A26;
+  --text-primary: #E2DCE7;
+  --text-secondary: #8B949E;
+  --accent: #00C3FF;
+  --accent-secondary: #00C3FF;
+  --accent-glow: rgba(0, 195, 255, 0.4);
+  --secondary-glow: rgba(112, 0, 255, 0.4);
 }
 
 body {
@@ -18,14 +18,18 @@ body {
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
+  background-image: 
+    linear-gradient(rgba(0, 195, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 195, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .text-gradient {
-  background-image: linear-gradient(to right, #0D46BA, #7815D0, #b042ff);
+  background-image: linear-gradient(to right, #00C3FF, #7000FF, #00C3FF);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -38,23 +42,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(11, 10, 38, 0.6);
   backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 195, 255, 0.1);
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s ease;
 }
 .glass-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(120, 21, 208, 0.4);
-  box-shadow: 0 10px 30px rgba(120, 21, 208, 0.2);
+  border-color: rgba(0, 195, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 195, 255, 0.2), inset 0 0 15px rgba(112, 0, 255, 0.1);
 }
 
 .bg-glow-blue {
-  background: radial-gradient(circle, rgba(13,70,186,0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0,195,255,0.15) 0%, transparent 70%);
 }
 
 .bg-glow-purple {
-  background: radial-gradient(circle, rgba(120,21,208,0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(112,0,255,0.15) 0%, transparent 70%);
 }

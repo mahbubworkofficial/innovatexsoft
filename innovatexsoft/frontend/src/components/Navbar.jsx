@@ -67,7 +67,7 @@ export default function Navbar() {
               IS
             </div>
           </div>
-          <span className="font-outfit font-bold text-xl tracking-tight hidden sm:block text-white">
+          <span className="font-futuristic font-bold text-xl tracking-tight hidden sm:block text-white">
             Innovatexsoft
           </span>
         </Link>
@@ -225,7 +225,7 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ duration: 0.3, type: 'spring', bounce: 0 }}
-            className="fixed right-0 top-0 bottom-0 z-40 w-[85vw] max-w-sm bg-[#0a0a0a] border-l border-white/10 shadow-2xl flex flex-col pt-24 pb-10 px-8 h-screen overflow-y-auto lg:hidden"
+            className="fixed right-0 top-0 bottom-0 z-40 w-[85vw] max-w-sm bg-[#0B0A26] border-l border-white/10 shadow-2xl flex flex-col pt-24 pb-10 px-8 h-screen overflow-y-auto lg:hidden"
           >
             <nav className="flex flex-col items-start gap-8 w-full">
               <Link to="/" className={cn('text-3xl font-bold transition-colors', isActive('/') ? 'text-primary' : 'text-white')}>Home</Link>
